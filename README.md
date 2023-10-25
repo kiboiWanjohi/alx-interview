@@ -1,4 +1,1 @@
-Curriculum
-Short Specializations
-Average: 0.0%
-
+A repository containing all ALX - Interview Tasks
