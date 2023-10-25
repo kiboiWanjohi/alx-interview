@@ -1,22 +1,22 @@
 <div>
-Write a script that reads stdin line by line and computes metrics:
+<p>Write a script that reads stdin line by line and computes metrics: &nbsp;  </p>
+<p>Input format: <IP Address> - [<date>] "GET /projects/260 HTTP/1.1" <status code> <file size> (if the format is not this one, the line must be skipped)
+</p>
+    <p>After every 10 lines and/or a keyboard interruption (CTRL + C), print these statistics from the beginning: &nbsp;  </p>
+    <p>Total file size: File size: <total size> where <total size> is the sum of all previous <file size> (see input format above) &nbsp;  </p>
 
-Input format: <IP Address> - [<date>] "GET /projects/260 HTTP/1.1" <status code> <file size> (if the format is not this one, the line must be skipped)
-After every 10 lines and/or a keyboard interruption (CTRL + C), print these statistics from the beginning:
-Total file size: File size: <total size>
-where <total size> is the sum of all previous <file size> (see input format above)
-Number of lines by status code:
-possible status code: 200, 301, 400, 401, 403, 404, 405 and 500
+<p>Number of lines by status code:&nbsp;  </p><p>
+possible status code: 200, 301, 400, 401, 403, 404, 405 and 500&nbsp;  </p><p>
 if a status code doesn’t appear or is not an integer, don’t print anything for this status code
 format: <status code>: <number>
 status codes should be printed in ascending order
 Warning: In this sample, you will have random value - it’s normal to not have the same output as this one.
-<div/>
+&nbsp;  </p>
 
-
-<div>
-alexa@ubuntu:~/0x03-log_parsing$ cat 0-generator.py
-#!/usr/bin/python3
+<p>alexa@ubuntu:~/0x03-log_parsing$ cat 0-generator.py
+</p>
+<code>
+    #!/usr/bin/python3
 import random
 import sys
 from time import sleep
@@ -32,10 +32,11 @@ for i in range(10000):
     ))
     sys.stdout.flush()
 
-alexa@ubuntu:~/0x03-log_parsing$ ./0-generator.py | ./0-stats.py 
-File size: 5213
-200: 2
-401: 1
+</code>
+
+<p>alexa@ubuntu:~/0x03-log_parsing$ ./0-generator.py | ./0-stats.py</p> 
+<p>File size: 5213</p>
+<li><ul>401: 1
 403: 2
 404: 1
 405: 1
@@ -66,14 +67,5 @@ File size: 16305
 403: 6
 404: 6
 405: 4
-500: 4
-Traceback (most recent call last):
-  File "./0-stats.py", line 15, in <module>
-Traceback (most recent call last):
-  File "./0-generator.py", line 8, in <module>
-    for line in sys.stdin:
-KeyboardInterrupt
-    sleep(random.random())
-KeyboardInterrupt
-alexa@ubuntu:~/0x03-log_parsing$ 
-</div>
+500: 4</ul>
+</li>
