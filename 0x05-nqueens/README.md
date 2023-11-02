@@ -1,6 +1,6 @@
 ## 0. N queens
 
-(http://www.crestbook.com/files/Judit-photo1_602x433.jpg)
+![Image of NQueens](http://www.crestbook.com/files/Judit-photo1_602x433.jpg)
 
 The N queens puzzle is the challenge of placing N non-attacking queens on an N×N chessboard. Write a program that solves the N queens problem.
 
